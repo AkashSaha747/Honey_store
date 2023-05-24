@@ -28,7 +28,6 @@ const Allroutes = () => {
       <Route path="/blog" element={<Blog />}></Route>
 
       {/* contact page */}
-      
       <Route path="/contact" element={<Contact />}></Route>
 
       {/* login page */}
