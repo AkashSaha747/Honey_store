@@ -12,6 +12,7 @@ import CartPage from "../Pages/CartPage";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 
+
 const Allroutes = () => {
   return (
     <Routes>
