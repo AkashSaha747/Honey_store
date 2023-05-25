@@ -23,7 +23,7 @@ const Navbar = () => {
   const cartItemCount = 5;
 
   return (
-    <Box border={"2px solid rgb(42,40,42)"} style={{width:"100%"}}>
+    <Box border={"2px solid rgb(42,40,42)"} style={{width:"100%"}} h={"12vh"}>
       <Text style={{background:"#185E49",color:"white",width:"100%",textAlign:"center",}}> Free shipping on orders over 500 rupees </Text>
    
    
