@@ -3,6 +3,7 @@ import React, { useState }  from 'react'
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdOutlineAccountCircle } from 'react-icons/md';
 import { BsCart2 } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -14,6 +15,7 @@ const Navbar = () => {
   const handleSearchQueryChange = (event) => {
     setSearchQuery(event.target.value);
   };
+  let navigate=useNavigate();
 
   const handleSearch = () => {
     // console.log('Search query:', searchQuery);
@@ -24,13 +26,15 @@ const Navbar = () => {
 
   return (
     <Box border={"2px solid rgb(42,40,42)"} style={{width:"100%"}} h={"12vh"}>
-      <Text style={{background:"#185E49",color:"white",width:"100%",textAlign:"center",}}> Free shipping on orders over 500 rupees </Text>
+      <Text style={{background:"rgb(47,47,47)",color:"white",width:"100%",textAlign:"center",}}> Free shipping on orders over 500 rupees </Text>
    
    
    
     <Flex style={{width:"80%",margin:"0px auto",padding:"0px",justifyContent:"space-between",alignItems:"center",}}>
 
-      <Box borderLeft={"2px solid black"} borderRight={"2px solid black"} paddingLeft={"10"}  paddingRight={"10"}  h={"50px"}>
+      <Box onClick={()=>{
+        navigate("/");
+      }} borderLeft={"2px solid black"} borderRight={"2px solid black"} paddingLeft={"10"}  paddingRight={"10"}  h={"50px"}>
         <Heading>LET IT BEE.CO</Heading>
       </Box>
 
