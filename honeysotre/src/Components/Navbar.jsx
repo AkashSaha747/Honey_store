@@ -1,12 +1,15 @@
 import { Box, Center, Flex, Heading,Badge, Spacer,Text,InputGroup,Input,InputRightElement,Button } from '@chakra-ui/react'
-import React, { useState }  from 'react'
+import React, { useContext, useState }  from 'react'
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdOutlineAccountCircle } from 'react-icons/md';
 import { BsCart2 } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
+import { Appcontext } from '../ContextProvider/AppcontextProvider';
 
 
 const Navbar = () => {
+  let {cart,setCart}=useContext(Appcontext);
+
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const handleButtonClick = () => {
@@ -22,7 +25,7 @@ const Navbar = () => {
   };
 
 
-  const cartItemCount = 5;
+  const cartItemCount = cart.length;
 
   return (
     <Box border={"2px solid rgb(42,40,42)"} style={{width:"100%"}} h={"12vh"}>

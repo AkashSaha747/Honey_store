@@ -137,10 +137,14 @@ const LandingPage = () => {
                   zIndex={"100"}
                   justifyContent={"space-evenly"}
                 >
-                  <Text>Products</Text>
+                  <Text onClick={()=>{
+                    navigate("/products")
+                  }}>Products</Text>
                   <Text onClick={scrollToAboutUs}>Abou Us</Text>
                   <Text onClick={scrollToBlog}>Our Blog</Text>
-                  <Text>Contacts</Text>
+                  <Text onClick={()=>{
+                    navigate("/contact")
+                  }}>Contacts</Text>
                 </Flex>
               </Box>
             </Flex>

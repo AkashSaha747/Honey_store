@@ -1,8 +1,22 @@
 
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import {Box,VStack,Text,Image,HStack, Center, Button} from "@chakra-ui/react"
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { Appcontext } from '../ContextProvider/AppcontextProvider'
 const ProductDetailsPage = () => {
+
+   let {cart,setCart}=useContext(Appcontext);
+   let {id}=useParams();
+
+   let addtoCart=()=>{
+      if(cart.includes(id)){
+         alert("already in cart!")
+      }else{
+         setCart([...cart,id])
+         alert("Successfully added to cart");
+
+      }
+   }
   return (
 
     <HStack w="100%" border="1px solid black" h="88vh" >
@@ -47,7 +61,9 @@ const ProductDetailsPage = () => {
                 <button  style={{paddingLeft:"10px"}} >+</button>
              </Center>
 
-             <Button backgroundColor='#22543D' variant='solid' pl="100px" pr="100px"  color={"white"}  borderRadius="30px">
+             <Button onClick={()=>{
+               addtoCart()
+             }} backgroundColor='#22543D' variant='solid' pl="100px" pr="100px"  color={"white"}  borderRadius="30px">
                     ADD TO CARD
                       </Button>
            </HStack>
