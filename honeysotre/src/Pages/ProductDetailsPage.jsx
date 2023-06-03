@@ -4,13 +4,13 @@ import {Box,VStack,Text,Image,HStack, Center, Button} from "@chakra-ui/react"
 import { Link } from 'react-router-dom'
 const ProductDetailsPage = () => {
   return (
-    <HStack w="100%" border="1px solid black" >
+    <HStack w="100%" h={"88vh"} border="1px solid black" >
     {/* first box */}
-   <Center  width="50%" h="100vh" backgroundColor=" #BEE3F8"  >
+   <Center  width="50%" h="100%" backgroundColor=" #BEE3F8"  >
     <Image w="50%"  mt="40px" src="https://www.bing.com/th?id=OIP.sLc2BHOvnXbICJUiNVzkIgHaKQ&w=150&h=208&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"></Image>
    </Center>
    {/* secomd box */}
-   <Box    m="0px" p="0px" w="50%"   h="100vh">
+   <Box    m="0px" p="0px" w="50%"   h="100%">
     <Box width="85%"    m="auto">  
     <HStack  mt="20px"  >
        <Link to="/"><Text>MAIN PAGE /</Text></Link> 
