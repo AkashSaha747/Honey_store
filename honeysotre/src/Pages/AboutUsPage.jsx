@@ -132,6 +132,7 @@ function AboutUsPage() {
                           fontFamily={"sans-serif"}
                         >
                          ABOUT US
+                         
                         </Box>
                         <Text fontFamily={"Brush script MT"}>a little about our passion</Text>
                         <Image src="https://media.discordapp.net/attachments/1100180350879154326/1113757220652453918/image-removebg-preview.png?width=145&height=152" pos={"absolute"} top={"10px"} left={"40px"} ></Image>
