@@ -4,7 +4,9 @@ import {Box,VStack,Text,Image,HStack, Center, Button} from "@chakra-ui/react"
 import { Link } from 'react-router-dom'
 const ProductDetailsPage = () => {
   return (
-    <HStack w="100%" h={"88vh"} border="1px solid black" >
+
+    <HStack w="100%" border="1px solid black" h="88vh" >
+
     {/* first box */}
    <Center  width="50%" h="100%" backgroundColor=" #BEE3F8"  >
     <Image w="50%"  mt="40px" src="https://www.bing.com/th?id=OIP.sLc2BHOvnXbICJUiNVzkIgHaKQ&w=150&h=208&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"></Image>
@@ -45,7 +47,7 @@ const ProductDetailsPage = () => {
                 <button  style={{paddingLeft:"10px"}} >+</button>
              </Center>
 
-             <Button backgroundColor='#22543D' variant='solid' pl="100px" pr="100px"   borderRadius="30px">
+             <Button backgroundColor='#22543D' variant='solid' pl="100px" pr="100px"  color={"white"}  borderRadius="30px">
                     ADD TO CARD
                       </Button>
            </HStack>
