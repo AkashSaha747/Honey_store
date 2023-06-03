@@ -23,26 +23,34 @@ function AboutUsPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   let navigate = useNavigate();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === words.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) =>
+  //       prevIndex === words.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   }, 4000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const aboutUsRef = useRef(null);
   const scrollToAboutUs = () => {
-    aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
+    navigate("/about-us");
   };
   const blogRef = useRef(null);
   const scrollToBlog = () => {
-    blogRef.current.scrollIntoView({ behavior: "smooth" });
+    // blogRef.current.scrollIntoView({ behavior: "smooth" });
+    navigate("/blog");
   };
+
+  const gotoproducts=()=>{
+    navigate("/products");
+  }
+  const gotocontacts=()=>{
+    navigate("/contact");
+  }
 
   // -------------------------
   let arr = [
@@ -111,20 +119,21 @@ function AboutUsPage() {
                         fontSize="2.5rem"
                         fontFamily={"Brush Script MT"}
                         fontWeight={"bold"}
-                        color="white"
+                        color="rgb(49,49,49)"
                         backgroundColor={
-                          ["#96C1E4", "#F9AE05", "#185E49"][index]
+                          ["white", "#F9AE05", "#185E49"][index]
                         }
                       >
                
-                        Discover the real taste of 
+                       
                         <Box
-                          fontSize={"18rem"}
+                          fontSize={["4rem","6rem","13rem"]}
                           mt={"-100px"}
                           fontFamily={"sans-serif"}
                         >
-                          {word}
+                         ABOUT US
                         </Box>
+                        <Text fontFamily={"Brush script MT"}>a little about our passion</Text>
                         <Image src="https://media.discordapp.net/attachments/1100180350879154326/1113757220652453918/image-removebg-preview.png?width=145&height=152" pos={"absolute"} top={"10px"} left={"40px"} ></Image>
                         <Image src="https://cdn.discordapp.com/attachments/1100180350879154326/1113760619615748116/image-removebg-preview_1.png" pos={"absolute"} top={"55px"} right={"130px"} ></Image>
                         <Image src="https://cdn.discordapp.com/attachments/1100180350879154326/1113761379262926890/image-removebg-preview_2.png" pos={"absolute"} bottom={"120px"} left={"130px"} ></Image>
@@ -142,10 +151,10 @@ function AboutUsPage() {
                   zIndex={"100"}
                   justifyContent={"space-evenly"}
                 >
-                  <Text>Products</Text>
+                  <Text onClick={gotoproducts}>Products</Text>
                   <Text onClick={scrollToAboutUs}>Abou Us</Text>
                   <Text onClick={scrollToBlog}>Our Blog</Text>
-                  <Text>Contacts</Text>
+                  <Text onClick={gotocontacts}>Contacts</Text>
                 </Flex>
               </Box>
             </Flex>
@@ -219,8 +228,8 @@ function AboutUsPage() {
         </Box>
 
      
-        <Box style={{ scrollSnapAlign: "start" }} className="main_body1">
-          <Box h={"230vh"} mt={"40px"}>
+        <Box style={{ scrollSnapAlign: "start" }} className="main_body1" p={"30px 50px"}>
+          <Box  >
           <Box h={"100%"}>
         <Center w="100%">
         <HStack  w="95%">
@@ -249,18 +258,19 @@ function AboutUsPage() {
             </Box>
            </HStack>
           </Box>
-          <Box ml="20px" width="50%">
-           <img  style={{width:"80%"}} src='https://th.bing.com/th/id/OIP.-PaWwDjfvY5KHHRiMJB68AHaE7?w=269&h=180&c=7&r=0&o=5&pid=1.7' alt=''/>
-           </Box>
+          <Flex ml="20px" width="50%" justifyContent={"end"}>
+           <img  style={{width:"80%",margin:"right"}} src='https://th.bing.com/th/id/OIP.-PaWwDjfvY5KHHRiMJB68AHaE7?w=269&h=180&c=7&r=0&o=5&pid=1.7' alt=''/>
+           </Flex>
         </HStack>
         </Center>
+        <br></br>
         {/* second */}
         <Center w="100%" mt="40px">
           <HStack w="95%">
             <Box w="20%">
             <img  style={{width:"95%"}} src="https://th.bing.com/th/id/OIP.-PaWwDjfvY5KHHRiMJB68AHaE7?w=269&h=180&c=7&r=0&o=5&pid=1.7" alt="" />
             </Box>
-            <Box >
+            <Box>
             <Text fontSize='2xl' fontWeight="bold">
             THE GUARANTEE OF THE QUALITY OF OUR 
            </Text>
@@ -273,6 +283,8 @@ function AboutUsPage() {
             </Box>
           </HStack>
         </Center>
+
+        {/* third */}
         <Center w="100%" mt="30px">
          <HStack w="95%">
           <Box w="50%">
@@ -284,9 +296,9 @@ function AboutUsPage() {
            </Text>
            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos natus explicabo culpa similique illum doloremque in, sunt, quam nihil id, eum iusto excepturi? Eaque quae eos voluptatibus, ad in nobis odio, facilis architecto eligendi culpa adipisci fugiat! Earum sapiente voluptates inventore beatae dolores, doloremque debitis deserunt commodi consequuntur provident a mollitia, nam, sed aliquam magni aspernatur? Vero maxime suscipit sapiente?</p> 
           </Box>
-          <Box w="50%">
+          <Flex justifyContent={"right"} w="50%">
             <img style={{width:"80%"}} src="https://th.bing.com/th/id/OIP.8jTSOK10EprTwgnGfTCEWAHaFQ?w=251&h=180&c=7&r=0&o=5&pid=1.7" alt="" />
-          </Box>
+          </Flex>
          </HStack>
         </Center>
         <Center w="100%" mt="30px">
