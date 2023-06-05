@@ -144,7 +144,7 @@ console.log(totalPrice)
 
   return (
    isauth? <>
-     data.image && (
+      
       <HStack w="100%" border="1px solid black" h="88vh">
         <Center width="50%" h="100%" backgroundColor=" #BEE3F8">
           <Image w="50%" mt="40px" h={"50%"} src={data.image} />

@@ -1,3 +1,5 @@
+
+
 import {
   Box,
   Button,
@@ -15,6 +17,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const words = ["HONEY", "HONEY", "HONEY"];
+  const [animationStarted, setAnimationStarted] = useState(false);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   let navigate = useNavigate();
@@ -25,11 +28,13 @@ const LandingPage = () => {
         prevIndex === words.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000);
+    setAnimationStarted(true);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [animationStarted]);
+
 
   const aboutUsRef = useRef(null);
   const scrollToAboutUs = () => {
@@ -120,9 +125,16 @@ const LandingPage = () => {
                         >
                           {word}
                         </Box>
-                        <Image src="https://media.discordapp.net/attachments/1100180350879154326/1113757220652453918/image-removebg-preview.png?width=145&height=152" pos={"absolute"} top={"10px"} left={"40px"} ></Image>
-                        <Image src="https://cdn.discordapp.com/attachments/1100180350879154326/1113760619615748116/image-removebg-preview_1.png" pos={"absolute"} top={"55px"} right={"130px"} ></Image>
-                        <Image src="https://cdn.discordapp.com/attachments/1100180350879154326/1113761379262926890/image-removebg-preview_2.png" pos={"absolute"} bottom={"120px"} left={"130px"} ></Image>
+                        <Image src="https://media.discordapp.net/attachments/1100180350879154326/1113757220652453918/image-removebg-preview.png?width=145&height=152" pos={"absolute"} top={"10px"} 
+                        position="absolute"
+left={animationStarted ? '20%' : '40%'}
+transform="translate(0px,60px)"
+transition="left 4s linear"
+w={"100px"}
+h={"100px"}
+                        ></Image>
+                        <Image src="https://cdn.discordapp.com/attachments/1100180350879154326/1113760619615748116/image-removebg-preview_1.png" pos={"absolute"} top={"55px"} right={"130px"}     ></Image>
+                      <Image src="https://cdn.discordapp.com/attachments/1100180350879154326/1113761379262926890/image-removebg-preview_2.png" pos={"absolute"} bottom={"120px"} left={"130px"} ></Image>
                       </Flex>
                     </>
                   );

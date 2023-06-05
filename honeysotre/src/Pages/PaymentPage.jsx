@@ -84,6 +84,16 @@ navigate("/")
           </Flex>
         </Box>
         <Box w={'40%'}>
+        <Image src='https://cdn.discordapp.com/attachments/1100180350879154326/1113757220652453918/image-removebg-preview.png'
+          position="absolute"
+          fontFamily={"Brush script MT"}
+          top="20%"
+          left={animationStarted ? '70%' : '80%'}
+          transform="rotate(1080deg)"
+          transition="left 4s linear"
+          w={"100px"}
+          h={"100px"}
+        ></Image>
           <Image
             w={'100%'}
             h={'88vh'}

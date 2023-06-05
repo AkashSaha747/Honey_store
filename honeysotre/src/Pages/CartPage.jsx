@@ -9,10 +9,15 @@ const CartPage = () => {
 
   let [state,setstate]=useState("first");
   let [name,setname]=useState("");
+  let [city,setcity]=useState("");
+  let [code,setcode]=useState("");
   let [phone,setphone]=useState("");
   let [email,setemail]=useState("");
   let [address,setaddress]=useState("");
   let [allitems,setallitems]=useState([]);
+  let [cardnumber,setcardnumber]=useState([]);
+  let [cvv,setcvv]=useState([]);
+  let [exp,setexp]=useState([]);
   let[total,setTotal]=useState(0);
   let {cart,setCart,page,setPage,itemwithquant,setitemwithquant,totalPrice,settotalPrice}=useContext(Appcontext);
 
@@ -65,8 +70,14 @@ getdata()
             </HStack>
 <br></br>
      {state=="first"&&   <Box >    <VStack>
-              <Input w={"50%"}placeholder='DELIVER CITY' border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
-              <Input w={"50%"}placeholder='POSTAL CODE' border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
+              <Input w={"50%"}placeholder='DELIVER CITY' onChange={(e)=>{
+                setcity(e.target.value)
+              }} border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
+              <Input w={"50%"}placeholder='POSTAL CODE' 
+              onChange={(e)=>{
+                setcode(e.target.value)
+              }}
+               border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
               <Input w={"50%"}placeholder='ADDRESS' border={"none"} onChange={(e)=>{
                 setaddress(e.target.value)
               }} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
@@ -77,7 +88,11 @@ getdata()
                 navigate("/products")
               }}>Back</Button>
               <Button  color={"white"} borderRadius={"30px"} background={"rgb(23,83,66)"} onClick={()=>{
+                if(address=="" || code=="" || city==""){
+                  alert("all fields are mandatory");
+                }else{
                setstate("second")
+                }
               }} 
               _hover={{bg:"rgb(241,80,29)",color:"white"}}>Proceed</Button>
             </Flex>
@@ -102,7 +117,11 @@ getdata()
                setstate("first")
               }}>Back</Button>
               <Button color={"white"} borderRadius={"30px"} background={"rgb(23,83,66)"} onClick={()=>{
+                      if(name=="" || email=="" || phone==""){
+                  alert("all fields are mandatory");
+                }else{
                 setstate("third")
+                }
               }}
               _hover={{bg:"rgb(241,80,29)",color:"white"}}
               >Proceed</Button>
@@ -146,9 +165,19 @@ setstate("final")
   state==="final" &&  <Box >
 
   <VStack>
-              <Input w={"50%"}placeholder='Card Number'type='number'  border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
-              <Input w={"50%"}  placeholder='MM/YYYY'   border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
-              <Input w={"50%"} placeholder='CVV' type='password' border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
+              <Input w={"50%"}placeholder='Card Number'type='number' onChange={(e)=>{
+                setcardnumber(e.target.value)
+              }}  border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
+              <Input w={"50%"}  placeholder='MM/YYYY' 
+              onChange={(e)=>{
+                setexp(e.target.value)
+              }}
+                border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
+              <Input w={"50%"} placeholder='CVV' type='password' border={"none"} borderBottom={"1px solid green"} borderRadius={"0"}
+              onChange={(e)=>{
+                setcvv(e.target.value)
+              }}
+               required></Input>
                 <Input w={"50%"} placeholder='CardHolder Name'  border={"none"} borderBottom={"1px solid green"} borderRadius={"0"} required></Input>
             </VStack>
             <br></br>
@@ -157,9 +186,14 @@ setstate("final")
                setstate("third")
               }}>Back</Button>
               <Button color={"white"} borderRadius={"30px"} background={"rgb(23,83,66)"} onClick={()=>{
-                setCart([]);
+if(cardnumber==""||cvv==""||exp==""){
+  alert("all fields are mandatory");
+}else{
+  setCart([]);
                 setitemwithquant([]);
-               navigate("/payment")
+  navigate("/payment")
+
+}
               }}
               _hover={{bg:"rgb(241,80,29)",color:"white"}}
               >Proceed</Button>
