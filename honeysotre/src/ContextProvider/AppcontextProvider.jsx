@@ -6,8 +6,11 @@ const AppcontextProvider = ({children}) => {
 
 const [cart,setCart]=useState([]);
 let [page,setPage]=useState(1);
+let [itemwithquant,setitemwithquant]=useState([]);
+let [totalPrice,settotalPrice]=useState(0);
+let [isauth,setisauth]=useState(false);
 return(
-    <Appcontext.Provider value={{cart,setCart,page,setPage}}>
+    <Appcontext.Provider value={{cart,setCart,page,setPage,itemwithquant,setitemwithquant,totalPrice,settotalPrice,isauth,setisauth}}>
         {children}
     </Appcontext.Provider>
 )
