@@ -53,10 +53,10 @@ const Contact = () => {
   ];
 
   function handlesubmit(){
-    if(name!="" || email!="" || phone!="" || message!=""){
-       alert("Form Submitted successfully!!")
-    }else{
+    if(name=="" || email=="" || phone=="" || message==""){
       alert("Please fill all details")
+    }else{
+      alert("Form Submitted successfully!!")
     }
   }
 
