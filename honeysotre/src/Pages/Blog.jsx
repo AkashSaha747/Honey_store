@@ -67,7 +67,7 @@ function Blog() {
         className="full_height"
         style={{
           height: "100vh",
-          scrollSnapType: "y mandatory",
+          // scrollSnapType: "y mandatory",
           overflowY: "scroll",
           scrollBehavior: "smooth",
         }}
@@ -260,7 +260,7 @@ function Blog() {
            </HStack>
           </Box>
           <Flex ml="20px" width="50%" justifyContent={"end"}>
-           <img  style={{width:"80%",margin:"right"}} src='https://th.bing.com/th/id/OIP.-PaWwDjfvY5KHHRiMJB68AHaE7?w=269&h=180&c=7&r=0&o=5&pid=1.7' alt=''/>
+           <img  style={{width:"80%",margin:"right"}} src="https://cdn.discordapp.com/attachments/1100180350879154326/1115154466971332608/image.png" alt=''/>
            </Flex>
         </HStack>
         </Center>
@@ -269,7 +269,7 @@ function Blog() {
         <Center w="100%" mt="40px">
           <HStack w="95%">
             <Box w="20%">
-            <img  style={{width:"95%"}} src="https://th.bing.com/th/id/OIP.-PaWwDjfvY5KHHRiMJB68AHaE7?w=269&h=180&c=7&r=0&o=5&pid=1.7" alt="" />
+            <img  style={{width:"95%"}} src="https://cdn.discordapp.com/attachments/1100180350879154326/1115155791960363079/image.png" alt="" />
             </Box>
             <Box>
             <Text fontSize='2xl' fontWeight="bold">
@@ -298,14 +298,14 @@ function Blog() {
            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos natus explicabo culpa similique illum doloremque in, sunt, quam nihil id, eum iusto excepturi? Eaque quae eos voluptatibus, ad in nobis odio, facilis architecto eligendi culpa adipisci fugiat! Earum sapiente voluptates inventore beatae dolores, doloremque debitis deserunt commodi consequuntur provident a mollitia, nam, sed aliquam magni aspernatur? Vero maxime suscipit sapiente?</p> 
           </Box>
           <Flex justifyContent={"right"} w="50%">
-            <img style={{width:"80%"}} src="https://th.bing.com/th/id/OIP.8jTSOK10EprTwgnGfTCEWAHaFQ?w=251&h=180&c=7&r=0&o=5&pid=1.7" alt="" />
+            <img style={{width:"80%"}} src="https://cdn.discordapp.com/attachments/1100180350879154326/1115155937225875466/image.png" alt="" />
           </Flex>
          </HStack>
         </Center>
         <Center w="100%" mt="30px">
          <HStack w="95%">
          <Box w="50%">
-            <img style={{width:"80%"}} src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXZ5wLC1naSFR_0J4v1pzMVQhHoX8VlP_YLg&usqp=CAU " alt="" />
+            <img style={{width:"80%"}} src=" https://cdn.discordapp.com/attachments/1100180350879154326/1115156044184825916/image.png " alt="" />
           </Box>
           <Box  w="50%">
           <Text fontSize='xl' fontWeight='bold' color="green" fontStyle="italic">
@@ -323,6 +323,9 @@ function Blog() {
           </Box>
     
         </Box>
+<br></br>
+<br></br>
+<br></br>
 
 
 
@@ -527,3 +530,9 @@ function Blog() {
 
 export default Blog
 
+
+
+// https://cdn.discordapp.com/attachments/1100180350879154326/1115154466971332608/image.png
+// https://cdn.discordapp.com/attachments/1100180350879154326/1115155791960363079/image.png
+// https://cdn.discordapp.com/attachments/1100180350879154326/1115155937225875466/image.png
+// https://cdn.discordapp.com/attachments/1100180350879154326/1115156044184825916/image.png

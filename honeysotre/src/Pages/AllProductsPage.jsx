@@ -354,7 +354,7 @@ console.log(d);
         className="full_height"
         style={{
           height: "100vh",
-          scrollSnapType: "y mandatory",
+          // scrollSnapType: "y mandatory",
           overflowY: "scroll",
           scrollBehavior: "smooth",
         }}
@@ -516,13 +516,13 @@ console.log(d);
         </Box>
 
      
-        <Box style={{ scrollSnapAlign: "start" }} h={"300vh"} className="main_body1" p={"30px 50px"}>
+        <Box style={{ scrollSnapAlign: "start" }} className="main_body1" p={"30px 50px"}>
     
     
 
-        <Box>
+        <Box >
     {data.length>0?
-    <Box h={"88vh"} w={"100%"} p={"20px"}>
+    <Box  w={"100%"} p={"20px"}>
     <Box margin={"left"}>
    <Flex alignItems={"center"}  gap={"5px"}><AddIcon onClick={onOpen}>Open Modal</AddIcon><Text>Sort</Text> </Flex> 
 
@@ -718,7 +718,11 @@ console.log(d);
       <br></br>
 
 <Pagination/>
+
 <br></br>
+      <br></br>
+      <br></br>
+
       </Box>
     </Box>:<Box>
     <br></br>
