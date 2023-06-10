@@ -22,7 +22,7 @@ const CartPage = () => {
   let {cart,setCart,page,setPage,itemwithquant,setitemwithquant,totalPrice,settotalPrice}=useContext(Appcontext);
 
   let getdata=async()=>{
-    let res=await fetch('http://localhost:8080/products');
+    let res=await fetch('https://honey-store-json.onrender.com/products');
     let jdata=await res.json();
     let arr=[];
     for(let i=0;i<cart.length;i++){

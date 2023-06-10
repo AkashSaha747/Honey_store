@@ -291,12 +291,12 @@ let{page}=useContext(Appcontext);
 const { isOpen, onOpen, onClose } = useDisclosure()
 let getdata=async()=>{
  if(filter!=""){
-  let res=await fetch(`http://localhost:8080/products?_limit=9&_page=${page}&_sort=price&_order=${filter}`);
+  let res=await fetch(`https://honey-store-json.onrender.com/products?_limit=9&_page=${page}&_sort=price&_order=${filter}`);
   let jdata=await res.json();
   console.log(jdata);
   setdata(jdata);
  }else{
-  let res=await fetch(`http://localhost:8080/products?_limit=9&_page=${page}`);
+  let res=await fetch(`https://honey-store-json.onrender.com/products?_limit=9&_page=${page}`);
   let jdata=await res.json();
   console.log(jdata);
   setdata(jdata);

@@ -128,7 +128,7 @@ settotalPrice(totalPrice+p)
   };
 
   let getdata = async () => {
-    let res = await fetch(`http://localhost:8080/products/${id}`);
+    let res = await fetch(`https://honey-store-json.onrender.com/products/${id}`);
     let jdata = await res.json();
     console.log(jdata);
     setdata(jdata);
