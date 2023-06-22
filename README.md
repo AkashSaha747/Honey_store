@@ -4,6 +4,10 @@ This is a store where you can buy variours honey products in cheap price and you
 
 ## Group members
 
-This is a group project made by 5 members in 5 days
+This is a group project made by 2 members in 4 days
 
 ### `npm start` to run project
+
+### `Deployed link of the project`  
+
+<a href="https://honeysotre.vercel.app/">https://honeysotre.vercel.app/</a>
